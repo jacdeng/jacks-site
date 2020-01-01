@@ -166,6 +166,12 @@ nav ul li a:hover{
     padding: 2em 2em 2em 2em;
     margin: 1em;
 }
+.content h1 {
+    color: black;
+}
+.content h1:hover {
+    color: #444444;
+}
 .content ul li p {
     font-size: 1.7em;
     margin:0.6em auto 0em auto;
@@ -251,12 +257,16 @@ nav ul li a:hover{
     /* landing desktop styles */
 
     .landing-desktop {
-        width:100%;
+        width:1000px;
         margin: 0 auto;
+        position: fixed;
+        z-index: -99;
+        bottom:0;
+        top:13%;
     }
     .scroll {
         width: 40px;
-        margin: 2em auto 3em auto;
+        margin: 30em auto 3em auto;
         animation: move 1.5s infinite alternate;
     }
 
