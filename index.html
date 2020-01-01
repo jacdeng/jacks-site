@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jack's site</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="container">
+            <header class="header">
+                <img src="img/smily.PNG"  alt="smily logo" class="logo">
+                <p class="header-text">Jack Deng</p>
+                
+                <nav>
+                    <a href="#" class = "hide-desktop">
+                        <img src="img/hamburger.PNG" alt="toggle menu" class="menu" id="menu">
+                    </a>
+    
+                    <ul class = "show-desktop hide-mobile" id="nav">
+                        <li id="exit" class="exit-btn hide-desktop"> 
+                            <img src="img/exit.PNG" alt="exit menu"> </li>
+                        <li><a href="#target-aboutme"><p>About Me</p> </a></li>
+                        <li><a href="/content.html"> <p>Content</p> </a></li>
+                        <li><a href="#target-contact"> <p>Contact</p></a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="landing">
+            <img src="img/landing.PNG" alt="hero landing desktop" class="landing-desktop show-desktop hide-mobile">
+            <img src="img/landing-mobile.PNG" alt="hero landing mobile" class="landing-mobile show-mobile hide-desktop">
+
+            <img src="img/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop filter-black" >
+        </div>  
+
+    </div>
+
+    <div class="light-grey-container">
+        <div class="container">
+            <a name="target-aboutme"></a>
+            <div class="AboutMe">
+                <section>
+                    <h1> About Me </h1>
+                    <img src="img/aboutme.jpg" alt="about me">
+                    <p>
+                        I am a 3rd year student studying Engineering Physics (ENPH) at the University of British Columbia. 
+                        I love computer science, I love mechanical stuff, I love physics, I also love nature, photography, 
+                        movies and many many more. To summarize, I love to learn new things! 
+
+                    </p>
+                </section>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="dark-grey-container">
+        <div class="container">
+            <a name="target-content"></a>
+            <div class="content">
+                <section>
+                    <h1>
+                        Content
+                    </h1>
+                    <ul>
+                        <li>
+                            <a href="/errorpage.html">
+                                <img src="img/enph.jpg" alt="yikes the robot">
+                                <p>Yikes, the Robot</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/errorpage.html">
+                            <img src="img/hack.jpg" alt="hack">
+                            <p>Hackathons</p>
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="/errorpage.html">
+                            <img src="img/work.jpg" alt="work">
+                            <p>Work</p>
+                            </a>  
+                        </li>
+                        <li>
+                            <a href="/content.html">
+                            <img src="img/littlejack.jpg" alt="littlejack">
+                            <p>More ...</p>
+                            </a>  
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a name="target-contact"></a>
+                <div class="contact">
+                    <h1>
+                        contact
+                    </h1>
+
+                    <ul class="email-and-resume">
+                        <li>
+                            <p>jackdeng000@gmail.com</p>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1my7syTT1eIL0jMJwUyPYxSsOx6dp7Y2r/view?usp=sharing" class="download-resume">
+                                <p>Download my resume</p>
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <div class="table">
+                        <ul class="links-list">
+                            <li>
+                                <a href="https://github.com/jacdeng" >
+                                <img src="img/_ionicons_svg_logo-github.svg" alt="github" class="filter-hover">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jacdeng/" >
+                                <img src="img/_ionicons_svg_logo-linkedin.svg" alt="linkedin" class="filter-hover">
+                                </a>
+                            </li>
+                            <li class="uh">
+                                <a href="https://unsplash.com/@jacdeng" >
+                                <img src="img/unsplash-2.svg" alt="unsplash" class="filter-hover">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e){
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e){
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
+
+</body>
+</html>
