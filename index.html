@@ -7,7 +7,36 @@
     <title>Jack's site</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+        });
+        } // End if
+    });
+    });
+    </script>
+
 </head>
+
 <body>
     <div class="header-container">
         <div class="container">
@@ -23,9 +52,9 @@
                     <ul class = "show-desktop hide-mobile" id="nav">
                         <li id="exit" class="exit-btn hide-desktop"> 
                             <img src="img/exit.PNG" alt="exit menu"> </li>
-                        <li><a href="#target-aboutme"><p>About Me</p> </a></li>
-                        <li><a href="#target-content"> <p>Content</p> </a></li>
-                        <li><a href="#target-contact"> <p>Contact</p></a></li>
+                        <li><a href="#target-aboutme"> <p id="aboutme">About Me</p> </a></li>
+                        <li><a href="#target-content"> <p id="content">Content</p> </a></li>
+                        <li><a href="#target-contact"> <p id="contact">Contact</p></a></li>
                     </ul>
                 </nav>
             </header>
@@ -37,14 +66,13 @@
             <img src="img/landing.PNG" alt="hero landing desktop" class="landing-desktop show-desktop hide-mobile">
             <img src="img/landing-mobile.PNG" alt="hero landing mobile" class="landing-mobile show-mobile hide-desktop">
 
-            <img src="img/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop filter-black" >
+            <a href="#target-contact"><img src="img/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop filter-black" ></a>
         </div>  
 
     </div>
 
     <div class="light-grey-container">
-        <div class="container">
-            <a name="target-aboutme"></a>
+        <div class="container" id="target-aboutme">
             <div class="AboutMe">
                 <section>
                     <h1> About Me </h1>
@@ -62,8 +90,7 @@
     </div>
 
     <div class='dark-grey-container'>
-        <div class="container">
-            <a name="target-content"></a>
+        <div class="container" id="target-content">
             <h1 class="content-text">
                 Content
             </h1>
@@ -228,8 +255,7 @@
 
     <footer>
         <div class="footer-container">
-            <div class="container">
-                <a name="target-contact"></a>
+            <div class="container" id="target-contact">
                 <div class="contact">
                     <h1>
                         contact
@@ -285,6 +311,7 @@
             nav.classList.add('hide-mobile');
             e.preventDefault();
         });
+
 
     </script>
 
