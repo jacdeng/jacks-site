@@ -137,6 +137,7 @@ nav ul li a:hover{
     padding: 0 1.2em 0 1.2em;
 }
 .AboutMe img {
+    border-radius: 0.7em;
     max-width: 90%;
 }
 
@@ -155,12 +156,15 @@ nav ul li a:hover{
     color: #E0E0E0;
     background-color: #383838;
     display:inline-block;
+    border-radius: 0.7em;
 }
 .project-item:hover {
-    background-color: #474747;
+    background-color: #686868;
 }
 .project-item img {
-    width: 80%;
+    border-radius: 0.7em;
+    margin-top: 1.5em;
+    width: 70%;
 }
 .project-item p{
     font-size: 1.5em;
@@ -185,6 +189,7 @@ nav ul li a:hover{
     padding: 0;
 }
 .download-resume {
+    border-radius: 0.7em;
     color: #E0E0E0;
     display: block;
     text-decoration: none;
